@@ -15,17 +15,32 @@ html.no-js(lang="")
     link(rel="stylesheet", href="styles/main.css")
 
   body(class="#{ bodyClass }")
-    //- header
+    .header
 
     block content
 
-    //- footer
+    .footer
     
-    script(src="scripts/main.concat.js?1")      
+    
+    //- // build:js scripts/components.js 
+    //- script(src="scripts/components/jquery/dist/jquery.js")
+    //- script(src="scripts/components/jquery.scrollbar/jquery.scrollbar.js")
+    //- script(src="scripts/components/bxslider-4/dist/jquery.bxslider.js")
+    //- // endbuild
+
+    script(src="scripts/components/jquery.js")
+    script(src="scripts/components/jquery.scrollbar.js")
+    script(src="scripts/components/jquery.bxslider.js")
+    
+
+
+    //- // build:js scripts/pages.js
+    script(src="scripts/pages/architecture.js")
+    //- // endbuild
+    
+
+    block scripts 
+
+    
     script.
       $('body').removeClass('no-js');
-
-    block scripts
-
-    script.
-      
