@@ -101,7 +101,7 @@ gulp.task('copy_static', function () {
 
   var js_components = [
     'jquery/dist/jquery.js',
-    'jquery.scrollbar/jquery.scrollbar.js',
+    'perfect-scrollbar/js/perfect-scrollbar.jquery.js',
     'bxslider-4/dist/jquery.bxslider.js'
   ];
 

@@ -2,10 +2,17 @@
 @import 'clearfix';
 @import 'grayscale';
 
+// @import '../components/perfect-scrollbar/css/perfect-scrollbar';
+@import 'p-scrollbar';
+
+// @import 'scrollbar.css';
+
 
 html, body {
   // min-height: 100% !important;
   // height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 // .gray {
@@ -15,3 +22,17 @@ html, body {
 body {
   background: #121212 url(../images/bg.jpg);
 }
+
+.header {
+  height: 140px;
+}
+
+.footer {
+  height: 60px;
+}
+
+.content {
+  
+}
+
+@import 'pages/architecture';

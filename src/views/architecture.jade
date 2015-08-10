@@ -1,12 +1,30 @@
 extends templates/layout
 
 block vars
-  - var bodyClass = 'achitecture'
+  - var bodyClass = 'architecture'
 
 
-block content
-  .content 2356789
-    
+block content 
+  - var images = 16
+
+  .content
+    .slider-wrapper
+      .slider
+        - var bi = -1
+        while bi < images -1
+          - bi++
+          .item
+            .bg(style="background-image: url(images/slides/#{ bi % 2 + 1 }.jpg)")
+      .cover
+
+    .preview-gallery
+      .container
+        - var si = -1
+        while si < images -1
+          - si++
+          .item
+            .preview(data-slide-id="#{ si }")
+              .bg(style="background-image: url(images/slides/#{ si % 2 + 1 }_small.jpg)")
 
 block scripts
 

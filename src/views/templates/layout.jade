@@ -21,7 +21,6 @@ html.no-js(lang="")
 
     .footer
     
-    
     //- // build:js scripts/components.js 
     //- script(src="scripts/components/jquery/dist/jquery.js")
     //- script(src="scripts/components/jquery.scrollbar/jquery.scrollbar.js")
@@ -29,18 +28,17 @@ html.no-js(lang="")
     //- // endbuild
 
     script(src="scripts/components/jquery.js")
-    script(src="scripts/components/jquery.scrollbar.js")
+    script(src="scripts/components/perfect-scrollbar.jquery.js")
     script(src="scripts/components/jquery.bxslider.js")
     
-
 
     //- // build:js scripts/pages.js
     script(src="scripts/pages/architecture.js")
     //- // endbuild
-    
+
 
     block scripts 
 
     
     script.
-      $('body').removeClass('no-js');
+      $('html').removeClass('no-js');
