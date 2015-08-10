@@ -35,23 +35,20 @@ $(function () {
 
 
   function onSlideChange(currentSlide) {
-    galleryItems.removeClass('active');
-    galleryItems.filter('[data-slide-id="'+ currentSlide +'"]').addClass('active');
     sliderWrapper.removeClass('faded');
-
+    galleryItems.removeClass('active');
+    var active = galleryItems.filter('[data-slide-id="'+ currentSlide +'"]').addClass('active');
+    
     // scroll into view slowly
   }
 
   onSlideChange(0);
 
   gallery.perfectScrollbar({ 
-    minScrollbarLength: 20,
-    maxScrollbarLength: 20,
+    minScrollbarLength: 16,
+    maxScrollbarLength: 16,
     suppressScrollY: true
-  });  
-  // gallery.scrollbar({
-    // showArrows: false
-    // scrolly: false    
-  // });
+  });
+
 
 });

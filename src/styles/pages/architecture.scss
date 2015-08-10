@@ -85,15 +85,12 @@ body.architecture {
 
   .preview-gallery {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     z-index: 2;
 
     width: 100%;
+    padding-bottom: 12px + 10px;
     
-    background-color: red;
-    // overflow-x: scroll;
-    // overflow-y: hidden;
-
     .container {
       display: table;
       height: 280px;
@@ -119,7 +116,6 @@ body.architecture {
           repeat: no-repeat;
           position: center center;
           // size: cover;
-          color: red;
         }
         height: 100%;
         width: 100%;
@@ -140,6 +136,21 @@ body.architecture {
           @include grayscale;  
           cursor: default;
         }
+      }
+    }
+  }
+
+  .ps-container {
+    > .ps-scrollbar-x-rail {
+      bottom: 10px;
+      height: 2px;
+      background-color: rgba(254,254,254,0.4);
+
+       > .ps-scrollbar-x {
+        bottom: -7px;
+        height: 16px;
+        border-radius: 16px;
+        background: #8996a0;
       }
     }
   }

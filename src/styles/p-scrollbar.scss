@@ -40,7 +40,7 @@ $ps-bar-hover: #999;
 
     background-color: green;
 
-    >.ps-scrollbar-x {
+    > .ps-scrollbar-x {
       @include scrollbar-default;
       bottom: 0; /* there must be 'bottom' for ps-scrollbar-x */
       height: 8px;

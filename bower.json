@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery.scrollbar": "gromo/jquery.scrollbar#~0.2.8",
-    "bxslider-4": "stevenwanderski/bxslider-4#~4.2.5"
+    "bxslider-4": "stevenwanderski/bxslider-4#~4.2.5",
+    "perfect-scrollbar": "~0.6.4"
   }
 }
