@@ -83,17 +83,91 @@ body.architecture {
     }
   }
 
-  .preview-gallery {
+  .shadow-wrapper {
     position: absolute;
     bottom: 10px;
     z-index: 2;
+    // width: 100%;
+    width: 90%;
+    margin: 0 5%;
 
-    width: 100%;
+
+    &::before, &::after {
+      display: block;
+      content: '';
+      opacity: 0;
+      transition: all 0.2s ease-out; 
+      transition-property: opacity;
+
+      position: absolute;
+      z-index: 2;
+
+      
+      width: 50px;
+      // height: 100%;
+      top: 14px;
+      bottom: 36px;
+
+      pointer-events: none;
+
+      
+    }
+
+    &:before {
+      left: 0;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;1+0,0+100 */
+      // background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+      // background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+      // background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+      // background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+      background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    }
+
+    &::after {
+      right: 0;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;1+0,0+100 */
+      // background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+      // background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+      // background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+      // background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+      background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    }
+
+    &.shadow-left::before {
+      opacity: 1;
+    }
+
+    &.shadow-right::after {
+      opacity: 1;
+    }
+
+
+    .preview-gallery {
+      z-index: 1;
+    }
+  }
+
+  .preview-gallery {
+    user-select: none;
+    -webkit-filteruser-select: none;
     padding-bottom: 12px + 10px;
+     
+    position: relative;    
+
     
+
+    &::before {
+
+    }
+
+    &::after {
+
+    }
+
+
     .container {
       display: table;
-      height: 280px;
+      // height: 280px;
     }
 
     .item {

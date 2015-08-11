@@ -16,6 +16,7 @@ $(function () {
 
 
   var gallery = $('.preview-gallery');
+  var galleryConent = gallery.find('.container');
   var galleryItems = gallery.find('.preview');
   galleryItems.on('click', function() {
     var slideId = $(this).data().slideId;
@@ -39,7 +40,9 @@ $(function () {
     galleryItems.removeClass('active');
     var active = galleryItems.filter('[data-slide-id="'+ currentSlide +'"]').addClass('active');
     
-    // scroll into view slowly
+    // active[0].scrollIntoView();
+    var scrollTo = active.position().left + gallery.scrollLeft() - gallery.width() / 2;
+    gallery.animate({ scrollLeft: scrollTo });
   }
 
   onSlideChange(0);
@@ -50,5 +53,36 @@ $(function () {
     suppressScrollY: true
   });
 
+
+  var SHADOW_INACTIVE = 40; // пикселей от края когда тень не нужна
+  var galleryWrapper = gallery.parent();
+  var galleryOnScroll = function() {
+    galleryWrapper.toggleClass('shadow-left', gallery.scrollLeft() > SHADOW_INACTIVE);
+    galleryWrapper.toggleClass('shadow-right', galleryConent.width() - gallery.width() - gallery.scrollLeft() > SHADOW_INACTIVE);
+  }
+
+
+  gallery.on('scroll', galleryOnScroll);
+  galleryOnScroll();
+
+
+
+  function debounce(f, timeout) {
+    var timerId;
+    return function () {
+      if (timerId) clearTimeout(timerId);
+      timerId = setTimeout(function() {
+        f();
+      },timeout);
+    };
+  }
+
+  var OnResizeDebounced = debounce(function() {
+    // console.log('resize!!!');
+    gallery.perfectScrollbar('update');
+  }, 300)
+
+
+  $(window).resize(OnResizeDebounced);
 
 });

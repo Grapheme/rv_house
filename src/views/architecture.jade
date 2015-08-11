@@ -17,14 +17,15 @@ block content
             .bg(style="background-image: url(images/slides/#{ bi % 2 + 1 }.jpg)")
       .cover
 
-    .preview-gallery
-      .container
-        - var si = -1
-        while si < images -1
-          - si++
-          .item
-            .preview(data-slide-id="#{ si }")
-              .bg(style="background-image: url(images/slides/#{ si % 2 + 1 }_small.jpg)")
+    .shadow-wrapper
+      .preview-gallery
+        .container
+          - var si = -1
+          while si < images -1
+            - si++
+            .item
+              .preview(data-slide-id="#{ si }")
+                .bg(style="background-image: url(images/slides/#{ si % 2 + 1 }_small.jpg)")
 
 block scripts
 
