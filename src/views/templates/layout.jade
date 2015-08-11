@@ -1,7 +1,7 @@
 doctype html
 
 - var title = '???'
-- var bodyClass = ''
+- var bodyClass = 'index'
 block vars
 
 
@@ -15,11 +15,39 @@ html.no-js(lang="")
     link(rel="stylesheet", href="styles/main.css")
 
   body(class="#{ bodyClass }")
-    .header
-
-    block content
+    .page-wrapper
+        .header
+            .wrapper
+                a(href="#").header__logo
+                a(href="#").header__phone
+                    span.phone__code +7 495
+                    span.phone__number 123 45 67
+                nav.header__menu
+                    - var menuLinks = [{"name": "Резиденция", "link": "#"},{"name": "Окружение", "link": "#"},{"name": "Архитектура", "link": "#"},{"name": "Контакты", "link": "#"}];
+                    each i in menuLinks
+                        a(href="#{i.link}").menu__link #{i.name}
+        block content
 
     .footer
+        .wrapper
+            .footer__left &copy; 2015 Лидер Инвест
+            .footer__right
+                a(href="#") Проектная декларация
+            .footer__center
+                .center__link.link-big
+                    a(href="#").link__item.item-bbdo
+                .center__link.link-min
+                    a(href="#").link__item.item-mezon
+                .center__link.link-min
+                    a(href="#").link__item.item-novostroy
+                .center__link.link-min
+                    a(href="#").link__item.item-lider
+                .center__link.link-min
+                    a(href="#").link__item.item-knight
+                .center__link.link-min
+                    a(href="#").link__item.item-cubes
+                .center__link.link-big
+                    a(href="#").link__item Ход строительства
     
     //- // build:js scripts/components.js 
     //- script(src="scripts/components/jquery/dist/jquery.js")

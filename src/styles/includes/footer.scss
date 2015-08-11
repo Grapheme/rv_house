@@ -1,0 +1,52 @@
+.footer {
+	position: relative;
+  	height: 60px;
+  	line-height: 60px;
+  	font-size: 0;
+  	text-align: center;
+  	color: #fff;
+  	text-transform: uppercase;
+  	font-family: 'Circe';
+
+  	a {
+  		color: #fff;
+  		text-decoration: none;
+  	}
+
+  	.footer__left, .footer__right, .footer__center {
+  		font-size: 13px;
+  	}
+
+  	.footer__center {
+  		display: inline-block;
+  		vertical-align: middle;
+
+  		.center__link {
+  			display: inline-block;
+  			vertical-align: middle;
+  			line-height: normal;
+
+  			.link__item {
+  				display: inline-block;
+
+  				&.item-bbdo {
+  					height: 14px;
+  					width: 136px;
+  					background: url(../images/partners/bbdo.png) 0 0 / 100% no-repeat;
+  				}
+  			}
+  		}
+  	}
+
+  	.footer__left {
+  		position: absolute;
+  		left: 20px;
+  		top: 0;
+  	}
+
+  	.footer__right {
+  		position: absolute;
+  		right: 20px;
+  		top: 0;
+  	}
+}
