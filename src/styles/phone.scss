@@ -1,0 +1,49 @@
+.header {
+  height: 60px;
+}
+
+.footer {
+  display: none;
+}
+
+body.architecture {
+  .slider-wrapper {
+    height: 420px;
+
+    .slider {
+      height: 420px;
+    }
+
+    .bx-controls {
+      bottom: 90px;
+      top: auto;
+      .bx-prev {
+        left: 10px + 20px;
+      }
+      .bx-next {
+        right: 10px;
+      }
+    }
+  }
+
+  .shadow-wrapper {
+    display: none;
+  }
+
+  .day-night {
+    bottom: 25px;
+    .tip {
+      font-weight: 400;
+      font-size: 18px;
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.page-wrapper {
+  &:after {
+    display: none;
+  }
+}

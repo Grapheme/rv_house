@@ -108,9 +108,7 @@ body.architecture {
       top: 14px;
       bottom: 36px;
 
-      pointer-events: none;
-
-      
+      pointer-events: none;      
     }
 
     &:before {
@@ -266,6 +264,7 @@ body.architecture {
         bottom: 10px;
         // transform: ;
 
+        opacity: 0.6;
       }
     }
 
@@ -295,5 +294,7 @@ body.architecture {
     &.day .switch { }
     &.night .switch { }
   }
-
 }
+
+
+

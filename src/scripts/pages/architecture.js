@@ -1,5 +1,7 @@
 $(function () {
 
+  if (!$('body').is('.architecture')) return;
+
   var sliderWrapper = $('.slider-wrapper');
   var sliderEl = sliderWrapper.find('.slider');
   var slider = sliderEl.bxSlider({
@@ -89,7 +91,8 @@ $(function () {
   var dayNightButton = dayNight.find('.switch');
   dayNightButton.on('click', function() {
     dayNight.removeClass('show-tip');
-    // switch?
+
+    // сделать что-то с мобильными - после клика подсказка не исчезает
   });
 
 

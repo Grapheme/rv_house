@@ -49,3 +49,7 @@ body {
 
 @import 'pages/architecture';
 @import 'pages/index';
+
+@media all and (max-width: 767px) {
+  @import 'phone';
+}
