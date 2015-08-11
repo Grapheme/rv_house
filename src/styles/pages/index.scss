@@ -1,0 +1,15 @@
+.index {
+  color: #fff;
+  margin: -140px 0 -60px;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  .index-wrap {
+    position: absolute;
+    top: 140px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    background: url(../images/index/background.jpg) center center / cover;
+  }
+}
