@@ -86,7 +86,7 @@ body.architecture {
   .shadow-wrapper {
     position: absolute;
     bottom: 10px;
-    z-index: 2;
+    z-index: 3;
     // width: 100%;
     width: 90%;
     margin: 0 5%;
@@ -228,4 +228,72 @@ body.architecture {
       }
     }
   }
+
+  .day-night {
+    position: absolute;
+    bottom: 200px;
+    z-index: 2;
+    color: #fff;
+    
+    left: 50%;
+    transform: translate(-50%,0);
+
+    
+    .tip {
+      opacity: 0;
+      transition: all 0.1s ease-out; 
+      transition-property: opacity;
+      text-align: center;
+      padding: 0 0 60px 0;
+      margin: 0 0 30px;
+      position: relative;
+      font-family: 'Circe';
+      font-weight: 300;
+      font-size: 32px;
+
+      &:after {
+        content: '';
+        display: block;
+        background: url(../images/arrow.png) no-repeat 0 0; 
+        background-size: contain;
+        transform: rotate(-90deg) translate(0,-50%);
+
+        height: 40px;
+        width: 40px;
+
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        // transform: ;
+
+      }
+    }
+
+    &.show-tip, &:hover {
+      .tip {
+        opacity: 1;
+      }
+      .switch {
+        opacity: 1;
+      }
+    }
+
+
+    .switch {
+      transition: all 0.1s ease-out; 
+      transition-property: opacity;
+
+
+      width: 64px;
+      height: 64px;
+      opacity: 0.6;
+      background: url(../images/day-night.png) no-repeat 0 0;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+
+    &.day .switch { }
+    &.night .switch { }
+  }
+
 }

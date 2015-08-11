@@ -59,8 +59,7 @@ $(function () {
   var galleryOnScroll = function() {
     galleryWrapper.toggleClass('shadow-left', gallery.scrollLeft() > SHADOW_INACTIVE);
     galleryWrapper.toggleClass('shadow-right', galleryConent.width() - gallery.width() - gallery.scrollLeft() > SHADOW_INACTIVE);
-  }
-
+  };
 
   gallery.on('scroll', galleryOnScroll);
   galleryOnScroll();
@@ -80,9 +79,20 @@ $(function () {
   var OnResizeDebounced = debounce(function() {
     // console.log('resize!!!');
     gallery.perfectScrollbar('update');
-  }, 300)
+  }, 300);
 
 
   $(window).resize(OnResizeDebounced);
+
+
+  var dayNight = $('.day-night');
+  var dayNightButton = dayNight.find('.switch');
+  dayNightButton.on('click', function() {
+    dayNight.removeClass('show-tip');
+    // switch?
+  });
+
+
+
 
 });
