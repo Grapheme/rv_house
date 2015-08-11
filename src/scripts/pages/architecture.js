@@ -24,12 +24,12 @@ $(function () {
     }
   });
 
-  gallery.on('mousemove', function(e) {
+  galleryItems.on('mousemove', function(e) {
     var overActive = $(e.target).closest('.preview').is('.active');
     sliderWrapper.toggleClass('faded', !overActive);
   });
 
-  gallery.on('mouseleave', function() {
+  galleryItems.on('mouseleave', function() {
     sliderWrapper.removeClass('faded');
   });
 
