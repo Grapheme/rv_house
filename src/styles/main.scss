@@ -146,3 +146,7 @@ body {
 @import 'pages/index';
 @import 'pages/company';
 @import 'pages/contacts';
+
+@media all and (max-width: 767px) {
+  @import 'phone';
+}
