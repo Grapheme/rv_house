@@ -1,6 +1,6 @@
 doctype html
 
-- var title = '???'
+- var title = 'RV'
 - var bodyClass = 'index'
 block vars
 
@@ -18,14 +18,14 @@ html.no-js(lang="")
     .page-wrapper
         .header
             .wrapper
-                a(href="#").header__logo
-                a(href="#").header__phone
+                a(href="./").header__logo
+                a(href="tel:+79451234567").header__phone.phone-block
                     span.phone__code +7 495
                     span.phone__number 123 45 67
                 nav.header__menu
-                    - var menuLinks = [{"name": "Резиденция", "link": "#"},{"name": "Окружение", "link": "#"},{"name": "Архитектура", "link": "#"},{"name": "Контакты", "link": "#"}];
+                    - var menuLinks = [{"name": "Резиденция", "link": "architecture.html"},{"name": "Окружение", "link": "architecture.html#2"},{"name": "Архитектура", "link": "architecture.html#3"},{"name": "Контакты", "link": "contacts.html"}];
                     each i in menuLinks
-                        a(href="#{i.link}").menu__link #{i.name}
+                        a(href="#{i.link}" class=activePage==i.link?'active':'').menu__link #{i.name}
         block content
 
     .footer
@@ -58,10 +58,13 @@ html.no-js(lang="")
     script(src="scripts/components/jquery.js")
     script(src="scripts/components/perfect-scrollbar.jquery.js")
     script(src="scripts/components/jquery.bxslider.js")
+    script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&sensor=true")
     
 
     //- // build:js scripts/pages.js
     script(src="scripts/pages/architecture.js")
+    script(src="scripts/pages/index.js")
+    script(src="scripts/pages/contacts.js")
     //- // endbuild
 
 

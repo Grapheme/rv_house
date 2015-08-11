@@ -24,3 +24,25 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'DINPro';
+  src:  url('../fonts/DINPro-Regular.eot?#iefix') format('embedded-opentype'),  
+        url('../fonts/DINPro-Regular.otf')  format('opentype'),
+        url('../fonts/DINPro-Regular.woff') format('woff'), 
+        url('../fonts/DINPro-Regular.ttf')  format('truetype'), 
+        url('../fonts/DINPro-Regular.svg#DINPro-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glober';
+  src:  url('../fonts/GloberRegular.eot?#iefix') format('embedded-opentype'),  
+        url('../fonts/GloberRegular.otf')  format('opentype'),
+        url('../fonts/GloberRegular.woff') format('woff'), 
+        url('../fonts/GloberRegular.ttf')  format('truetype'), 
+        url('../fonts/GloberRegular.svg#GloberRegular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}

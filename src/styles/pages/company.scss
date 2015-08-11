@@ -1,0 +1,51 @@
+.company {
+  .company__list {
+    margin: 0;
+    padding: 60px 0 175px;
+    list-style: none;
+
+    .list__item {
+      overflow: hidden;
+      text-align: center;
+      margin-top: 100px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .item__image {
+        display: inline-block;
+        vertical-align: top;
+        width: 21%;
+      }
+
+      .item__content {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        text-align: left;
+
+        .content__title {
+          font-family: 'Circe';
+          font-size: 32px;
+          text-transform: uppercase;
+        }
+
+        .content__link {
+          font-size: 13px;
+
+          a {
+            color: #8996a0;
+            text-decoration: none;
+          }
+        }
+
+        .content__text {
+          font-size: 13px;
+          line-height: 1.385;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}

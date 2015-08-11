@@ -13,14 +13,19 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
+  font-family: 'DINPro';
 }
 
 // .gray {
   // @include grayscale;
 // }
 
+$headerHeight: 140px;
+$footerHeight: 60px;
+
 body {
   background: #121212 url(../images/bg.jpg);
+  min-width: 1100px;
 }
 
 .wrapper {
@@ -29,15 +34,105 @@ body {
 	margin: 0 auto;
 }
 
+.in-wrapper {
+  position: relative;
+  color: #fff;
+  margin: (-$headerHeight) 0 (-$footerHeight);
+  padding: $headerHeight 0 $footerHeight;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
 .page-wrapper {
 	min-height: 100%;
-	margin-bottom: -60px; 
+	margin-bottom: -$footerHeight; 
 
 	&:after {
 		content: "";
 		display: block;
-		height: 60px;
+		height: $footerHeight;
 	}
+}
+
+.us-content {
+  position: relative;
+  z-index: 3;
+}
+
+.us-background {
+  position: absolute;
+  z-index: 1;
+  top: $headerHeight;
+  bottom: $footerHeight;
+  left: 0;
+  right: 0;
+  background: rgba(26, 26, 26, .7);
+}
+
+.phone-block {
+  font-family: 'Circe';
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: -18px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/phone.png) 0 0 / 100% 100%;
+  }
+
+  .phone__code {
+    font-size: 12px;
+    margin-right: 3px;
+  }
+
+  .phone__number {
+    font-size: 32px;
+  }
+}
+
+.us-btn {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #1a1a1a;
+  border: 2PX solid #2a2a2a;
+  padding: 0 70px;
+  height: 36px;
+  line-height: 32px;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2a2a2a;
+    transform: translateY(-100%);
+    transition: all .2s ease;
+  }
+
+  &:hover {
+    &:before {
+      transform: translateY(0);
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .content {
@@ -49,3 +144,5 @@ body {
 
 @import 'pages/architecture';
 @import 'pages/index';
+@import 'pages/company';
+@import 'pages/contacts';

@@ -1,0 +1,28 @@
+extends templates/layout
+
+block vars
+  - var bodyClass = 'company-body'
+
+block content
+  .in-wrapper.company
+    .us-background
+    .us-content
+      .wrapper
+        ul.company__list
+          each i in [1,2,3]
+            li.list__item
+              .item__image
+              .item__content
+                .content__title Эксклюзивный брокер
+                .content__link
+                  a(href="#") www.knightfrank.ru
+                .content__text
+                  p.
+                    Консалтинговая компания Knight Frank основана в Лондоне в 1896 году и является крупнейшей независимой международной консалтинговой компанией, предоставляющей своим клиентам услуги на рынке коммерческой и жилой недвижимости.
+                    Knight Frank совместно со своим стратегическим партнером, компанией Newmark Knight Frank, располагает сетью из 370 офисов и насчитывает более 12000 специалистов по всему миру.
+                  p.
+                    В России  первый офис Knight Frank открылся в 1996 году. На сегодняшней день компания представлена 
+                    6 офисами в Москве и Санкт-Петербурге, в штате компании работает более 360 специалистов.
+
+
+block scripts
