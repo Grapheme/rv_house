@@ -16,7 +16,12 @@
       .item__image {
         display: inline-block;
         vertical-align: top;
-        width: 21%;
+        height: 120px;
+        width: 14%;
+        margin-right: 7%;
+        box-sizing: border-box;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
 
       .item__content {
