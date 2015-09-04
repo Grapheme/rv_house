@@ -1,0 +1,60 @@
+extends templates/layout
+
+block vars
+  - var bodyClass = 'contact-body'
+  - var activePage = 'contacts.html'
+
+block content
+  .in-wrapper.contacts
+    .us-background
+    .us-content
+      .wrapper
+        .contacts-block
+          .block__left
+            .left__title Свяжитесь с нами
+            form
+              .left__inputs
+                .inputs__item.js-input
+                  .item__placeholder Имя
+                  input(type="text")
+                .inputs__item.js-input
+                  .item__placeholder Фамилия
+                  input(type="text")
+                .inputs__item.js-input
+                  .item__placeholder E-mail
+                  input(type="text")
+                .inputs__item.js-input
+                  .item__placeholder Телефон
+                  input(type="text")
+              .left__btn
+                button(type="submit").us-btn
+                  span Отправить
+          .block__right
+            .right__item
+              .item__title Эксклюзивный брокер
+              .item__image
+                .image__block(style="background-image: url(images/partners/knight.svg);")
+              .item__bottom
+                .bottom__item
+                  a(href="tel:+74959810000").phone-block
+                    span.phone__number <span>+7</span> 495 981 00 00
+                .bottom__item
+                  span.item__name Юлия Вересова
+                .bottom__item
+                  a(href="mailto:yulia.veresova@ru.knightfrank.com").item__mail yulia.veresova@ru.knightfrank.com
+            .right__item
+              .item__title Девелопер
+              .item__image
+                .image__block(style="background-image: url(images/partners/lider.svg);")
+              .item__bottom
+                .bottom__item
+                  a(href="tel:+74996830223").phone-block
+                    span.phone__number <span>+7</span> 499 683 02 23
+                .bottom__item
+                  span.item__name Анна Попова
+                .bottom__item
+                  a(href="mailto:popova@l-invest.ru").item__mail popova@l-invest.ru
+      .contacts-map
+        #contacts-map
+
+block scripts

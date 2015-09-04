@@ -1,0 +1,110 @@
+extends templates/layout
+
+block vars
+  - var bodyClass = 'residence-body'
+  - var activePage = 'residence.html'
+
+block content
+  .in-wrapper.residence
+    .us-background
+    .us-content
+      .wrapper
+        .residence__block
+          .block__icon
+          .block__title Характеристики
+          .block__list
+            .list__item
+              .item__title 6
+              .item__desc Этажей
+            .list__item
+              .item__title 3,45
+              .item__desc Высота потолка<br>квартиры
+            .list__item
+              .item__title 3,8
+              .item__desc высота потолка<br>пентхауса
+            .list__item
+              .item__title 21
+              .item__desc количество<br>квартир в доме
+          .block__sub
+            span Монолит+кирпич
+            span Планировка свободная
+        .residence__block
+          .block__icon
+          .block__title Сроки проекта
+          .block__desc
+            .desc__item
+              .item__title 2 квартал 2015 года
+              .item__desc Начало реализации проекта
+            .desc__item
+              .item__title 3 квартал 2017 года
+              .item__desc Окончание реализации проекта
+        .residence__block
+          .block__icon
+          .block__title Местоположение
+          .block__desc
+            .desc__item
+              .item__title г. Москва, ЦАО
+              .item__desc район Хамовники, Всеволожский пер., вл. 5
+        .residence__block
+          .block__icon
+          .block__title площадь квартир
+          .block__desc.desc-min
+            .desc__item
+              .item__title 104 кв.м.
+              .item__desc 2-х комн. квартиры
+            .desc__item
+              .item__title 136 – 155 кв.м.
+              .item__desc 3-х комн. квартиры
+            .desc__item
+              .item__title 172 – 250 кв.м.
+              .item__desc 4-х комн. квартиры
+            .desc__item
+              .item__title 201 – 250 кв.м.
+              .item__desc Пентхаусы
+        .residence__block
+          .block__icon
+          .block__title Подземная часть
+          .block__list.list-bottom
+            .list__item
+              .item__title 2
+              .item__desc уровня подземного паркинга
+            .list__item
+              .item__title 45
+              .item__desc количество машиномест
+        //- .residence__left
+          .left__top
+            .top__block
+              .block__title Адрес
+              .block__desc.
+                г. Москва, ЦАО,<br>
+                район Хамовники,<br>
+                Всеволожский пер., вл. 5
+            .top__block
+              .block__title Проектная организация
+              .block__desc ООО «Мезонпроект» 
+            .top__block
+              .block__title Начало реализации проекта
+              .block__desc 2 квартал 2015 года
+            .top__block
+              .block__title Окончание реализации проекта
+              .block__desc 3 квартал 2017 года
+          .left__bottom
+            .bottom__block.
+              монолит<br>
+              + кирпич
+            .bottom__block.
+              6<br>
+              этажей
+            .bottom__block.
+              21<br>
+              квартира
+            .bottom__block.
+              2 уровня<br>
+              паркинга
+        //- .residence__right
+          .right__desc
+            span.desc__left I секция  2 лифта
+            span.desc__right II секция  2 лифта
+          .right__image
+
+block scripts

@@ -1,6 +1,6 @@
 doctype html
 
-- var title = 'RV'
+- var title = 'Резиденция на Всеволожском'
 - var bodyClass = 'index'
 block vars
 
@@ -16,38 +16,52 @@ html.no-js(lang="")
 
   body(class="#{ bodyClass }")
     .page-wrapper
-        .header
+        .header.js-header
             .wrapper
                 a(href="./").header__logo
-                a(href="tel:+79451234567").header__phone.phone-block
-                    span.phone__code +7 495
-                    span.phone__number 123 45 67
+                a(href="tel:+74996830300").header__phone.phone-block
+                    //- span.phone__code 
+                    span.phone__number <span>+7</span> 499 683 03 00
                 nav.header__menu
-                    - var menuLinks = [{"name": "Резиденция", "link": "architecture.html"},{"name": "Окружение", "link": "architecture.html#2"},{"name": "Архитектура", "link": "architecture.html#3"},{"name": "Контакты", "link": "contacts.html"}];
+                    - var menuLinks = [{"name": "Гений места", "link": "about.html"},{"name": "Силуэт города", "link": "environment.html"},{"name": "Музыка в камне", "link": "architecture.html"},{"name": "Контакты", "link": "contact.html"}];
                     each i in menuLinks
                         a(href="#{i.link}" class=activePage==i.link?'active':'').menu__link #{i.name}
         block content
 
-    .footer
+    .footer.js-footer
         .wrapper
-            .footer__left &copy; 2015 Лидер Инвест
+            .footer__left
+                a(href="stage.html").link__item.footer-link Ход строительства
+                    span.item__default
+                    span.item__hover
+                a(target="_blank" href="uploads/Красивая_Всеволожский_Проектная декларация_ред_ №_5_от 30-07-2015г.pdf").footer-link Проектная декларация
             .footer__right
-                a(href="#").footer-link Проектная декларация
             .footer__center
-                .center__link.link-big
-                    a(href="#").link__item.item-bbdo
                 .center__link.link-min
-                    a(href="#").link__item.item-mezon
+                    //-.js-footer-left
+                    a(href="http://bbdogroup.ru" target="_blank").link__item.item-bbdo
+                        span.item__default
+                        span.item__hover
                 .center__link.link-min
-                    a(href="#").link__item.item-novostroy
+                    a(href="company.html#mezon").link__item.item-mezon
+                        span.item__default
+                        span.item__hover
                 .center__link.link-min
-                    a(href="#").link__item.item-lider
+                    a(href="company.html#novostroy").link__item.item-novostroy
+                        span.item__default
+                        span.item__hover
                 .center__link.link-min
-                    a(href="#").link__item.item-knight
+                    a(href="company.html#lider").link__item.item-lider
+                        span.item__default
+                        span.item__hover
                 .center__link.link-min
-                    a(href="#").link__item.item-cubes
-                .center__link.link-big
-                    a(href="#").link__item.footer-link Ход строительства
+                    a(href="company.html#knight").link__item.item-knight
+                        span.item__default
+                        span.item__hover
+                .center__link.link-min
+                    a(href="company.html#cubes").link__item.item-cubes
+                        span.item__default
+                        span.item__hover
     
     //- // build:js scripts/components.js 
     //- script(src="scripts/components/jquery/dist/jquery.js")

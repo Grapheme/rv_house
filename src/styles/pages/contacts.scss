@@ -10,14 +10,15 @@
       width: 30%;
 
       .left__title {
-        font-family: 'Glober';
-        font-size: 40px;
+        font-family: 'Circe';
+        font-size: 18px;
         text-transform: uppercase;
-        line-height: 1.075;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       .left__inputs {
-        margin-top: 20px;
+        margin-top: 0px;
 
         .inputs__item {
           position: relative;
@@ -33,10 +34,12 @@
             box-sizing: border-box;
             background: transparent;
             border: none;
-            border-bottom: 1PX solid #484848;
+            border-bottom: 1PX solid #8d959e;
             font-size: 18px;
             color: #fff;
             outline: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
           }
 
           .item__placeholder {
@@ -47,6 +50,7 @@
             left: 0;
             transition-property: transform, font-size;
             transition-duration: .4s, .3s;
+            color: #8d959e;
             //transition: all .4s ease;
           }
 
@@ -75,71 +79,78 @@
       display: inline-block;
       vertical-align: top;
       text-align: left;
-      width: 40%;
+      width: 55%;
 
       .phone-block {
         position: relative;
       }
 
       .right__item {
-        margin-top: 30px;
+        //margin-top: 70px;
+        float: left;
+        width: 50%;
 
-        &:first-child {
-          margin-top: 0;
+        .item__title {
+          color: #8d959e;
+          text-transform: uppercase;
+          font-size: 18px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
         }
 
         .item__image {
           position: relative;
           height: 85px;
+          margin-top: 55px;
+
+          .image__block {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom left;
+          }
 
           span {
             position: absolute;
             bottom: 0;
-            right: 0;
+            left: 79.5%;
             font-family: 'Circe';
             font-size: 15px;
             text-transform: uppercase;
+            line-height: 1;
+            white-space: nowrap;
           }
         }
 
         .item__bottom {
           position: relative;
-          margin-top: 40px;
+          margin-top: 80px;
 
           .bottom__item {
-            display: inline-block;
-            vertical-align: top;
-            height: 60px;
-            line-height: 60px;
-            border-right: 1PX solid #494949;
-            width: 52%;
-            text-align: center;
-
-            &:first-child {
-              text-align: left;
-            }
-
-            &:last-child {
-              border-right: none;
-              text-align: right;
-            }
-
-            &:first-child, &:last-child {
-              width: 24%;
-              margin: 0 -.2em;
-            }
+            margin-top: 10px;
 
             .item__name {
               display: inline-block;
               vertical-align: middle;
-              font-size: 20px;
+              font-size: 18px;
               line-height: 1.05;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
             }
 
             .item__mail {
-              font-size: 15px;
-              color: #7a7676;
+              font-size: 18px;
+              color: #8d959e;
               text-decoration: none;
+              transition: all .3s ease;
+
+              &:hover {
+                color: #fff;
+              }
             }
 
             .phone-block {
@@ -152,6 +163,12 @@
       }
     }
   }
+
+  .phone-block {
+    &:after {
+      display: none;
+    }
+  }
 }
 
 .contacts-map {
@@ -162,4 +179,10 @@
 #contacts-map {
   height: 475px;
   margin-top: 50px;
+}
+
+.contact-body {
+  .us-content {
+    background: #000;
+  }
 }

@@ -1,33 +1,49 @@
 extends templates/layout
 
 block vars
-  - var bodyClass = 'index-body'
+  - var bodyClass = 'index-body js-index-body'
 
 block content
-  .in-wrapper.index
-    .index-content.us-content
+  .in-wrapper.index.js-index
+    .index-background
+    .wrapper(style="position: relative")
+      .loading-logo.js-anim-logo
+    .index-content.us-content.js-index-content
       .wrapper
         .index__logo
-        .index__text.
-          Клубный дом «Резиденция на Всеволожском» гармонично вписан<br>
-          в исторически сложившуюся застройку и не нарушает ее архитектурную целостность.<br>
-          Фасад и интерьеры дома разработаны по авторскому проекту<br>
-          и выполнены в стиле арт-деко.<br>
-        ul.index__blocks
-          li.blocks__item.js-index-hover
-            a(href="architecture.html").item__link
-            .item__image(style="background: url(../images/tmp/index-1.jpg);")
-            .item__title Резиденция
-            .item__text Особую элегантность внешнему облику придают роскошные декоративные детали, где основной лейтмотив — изящный орнамент,запечатленный в камне.
-          li.blocks__item.js-index-hover
-            a(href="architecture.html").item__link
-            .item__image(style="background: url(../images/tmp/index-2.jpg);")
-            .item__title Окружение
-            .item__text Новый респектабельный дом появится в самом престижном районе столицы, известном как «Золотая миля».
-          li.blocks__item.js-index-hover
-            a(href="architecture.html").item__link
-            .item__image(style="background: url(../images/tmp/index-3.jpg);")
-            .item__title Архитектура
-            .item__text «Лидер-Инвест» — девелоперская компания, реализующая проекты строительства качественной недвижимости и комплексного развития территорий.
+          .logo__image.js-index-logo
+        .index-wrapper
+          .index__text.js-hover-cont
+            .js-hover-text.active.
+              Что такое роскошь? Имя, которое у всех на слуху, неограниченные возможности,
+              правильные инвестиции, финансовая стабильность? Не только. Настоящая роскошь —
+              уединиться в самом центре шумного мегаполиса, занять тихую гавань в круговороте столичной жизни,
+              и посвящать редкие минуты свободного времени самым близким. Там, где созданы непревзойденный комфорт
+              и выраженная в каждой детали гармония эстетики и практичности.
+            .js-hover-text.
+              Центр Москвы обладает – это место с особой энергетикой. Место силы, средоточие духовной и материальной культуры, питающее не одно поколение великих людей. Веками здесь складывались неповторимый колорит и атмосфера.
+            .js-hover-text.
+              Великие исторические памятники – наследие эпох и величие Государства Российского. Здесь город предстает во всей своей красоте и славе, именно здесь, как нигде, ощущается причастности к истории и культуре страны.
+            .js-hover-text.
+              Эти каменные стены вышли словно из-под резца великого мастера, когда сквозь толщу породы появляется на свет настоящий шедевр. Эта сдержанная элегантность и красота по праву займет свое место в ряду архитектурных жемчужин столицы.
+          ul.index__blocks.js-index-hovers
+            li.blocks__item.js-index-hover
+              a(href="residence.html").item__link
+              .item__image
+                img.js-gray(src="images/index/menu1.jpg")
+              .item__title ГЕНИЙ МЕСТА
+              //-.item__text Центр Москвы обладает – это место с особой энергетикой. Место силы, средоточие духовной<br>и материальной культуры, питающее<br>не одно поколение великих людей. Веками здесь складывались неповторимый колорит и атмосфера.
+            li.blocks__item.js-index-hover
+              a(href="around.html").item__link
+              .item__image
+                img.js-gray(src="images/index/menu2.jpg")
+              .item__title СИЛУЭТ ГОРОДА
+              //-.item__text Великие исторические памятники – наследие эпох и величие Государства Российского. Здесь город предстает во всей своей красоте и славе, именно здесь, как нигде, ощущается причастности к истории и культуре страны.
+            li.blocks__item.js-index-hover
+              a(href="architecture.html").item__link
+              .item__image
+                img.js-gray(src="images/index/menu3.jpg")
+              .item__title МУЗЫКА В КАМНЕ
+              //-.item__text Эти каменные стены вышли словно из-под резца великого мастера, когда сквозь толщу породы появляется<br>на свет настоящий шедевр. Эта сдержанная элегантность и красота по праву займет свое место в ряду архитектурных жемчужин столицы.
 
 block scripts

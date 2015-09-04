@@ -1,0 +1,167 @@
+.residence {
+  padding-bottom: 110px;
+
+  .us-content {
+    overflow: hidden;
+    padding-bottom: 70px;
+  }
+
+  .residence__left {
+    float: left;
+    width: 19.5%;
+    box-sizing: border-box;
+    padding: 75px 35px 0 0;
+
+    .left__top {
+      .top__block {
+        font-size: 18px;
+        margin-top: 15px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .block__title {
+          color: #6e6e6e;
+        }
+      }
+    }
+
+    .left__bottom {
+      margin-top: 55px;
+      font-family: 'Circe';
+      font-size: 30px;
+      text-transform: uppercase;
+
+      .bottom__block {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .residence__right {
+    float: left;
+    width: 80.5%;
+    padding-top: 30px;
+
+    .right__desc {
+      .desc__left, .desc__right {
+        display: inline-block;
+        vertical-align: middle;
+        width: 45%;
+        text-align: center;
+      }
+
+      .desc__right {
+        float: right;
+      }
+    }
+
+    .right__image {
+      margin-top: 25px;
+      height: 690px;
+      background: url(../images/residence.png) center top / contain no-repeat;
+    }
+  }
+
+  .residence__block {
+    text-align: center;
+    margin-top: 100px;
+
+    &:first-child {
+      margin-top: 80px;
+    }
+
+    .block__icon {
+      margin-bottom: 25px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 35px;
+        height: 39px;
+        background: url(../images/about-icon.png) 0 0 / 100% auto no-repeat;
+      }
+    }
+
+    .block__title {
+      font-size: 40px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .block__list {
+      margin-top: 25px;
+
+      .list__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 180px;
+        margin: 0 25px;
+
+        .item__title {
+          font-size: 60px;
+          font-weight: 300;
+          line-height: 1;
+        }
+
+        .item__desc {
+          color: #6e6e6e;
+          text-transform: lowercase;
+          margin-top: 7px;
+          font-size: 18px;
+          line-height: 1.167;
+        }
+      }
+
+      &.list-bottom {
+        .list__item {
+          width: 265px;
+        }
+      }
+    }
+
+    .block__sub {
+      font-size: 28px;
+      margin-top: 22px;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 (230/2)+px;
+      }
+    }
+
+    .block__desc {
+      margin-top: 25px;
+
+      .desc__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 350px;
+        margin: 0 25px;
+
+        .item__title {
+          font-size: 28px;
+          font-weight: 300;
+        }
+
+        .item__desc {
+          color: #6e6e6e;
+          text-transform: lowercase;
+          margin-top: 7px;
+          font-size: 18px;
+          line-height: 1.167;
+        }
+      }
+
+      &.desc-min {
+        .desc__item {
+          width: 200px;
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+}

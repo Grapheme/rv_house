@@ -13,7 +13,14 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'DINPro';
+  font-family: 'Circe';
+  font-weight: 300;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+input, button {
+  font-family: 'Circe';
 }
 
 // .gray {
@@ -26,6 +33,7 @@ $footerHeight: 60px;
 body {
   background: #121212 url(../images/bg.jpg);
   min-width: 1100px;
+  transform: translateZ(0);
 }
 
 .wrapper {
@@ -78,11 +86,11 @@ body {
   &:after {
     content: "";
     position: absolute;
-    right: -20px;
-    top: -18px;
-    width: 20px;
-    height: 20px;
-    background: url(../images/phone.png) 0 0 / 100% 100%;
+    right: 0;
+    top: -5px;
+    width: 13px;
+    height: 13px;
+    background: url(../images/phone-icon.png) 0 0 / 100% 100%;
   }
 
   .phone__code {
@@ -91,25 +99,35 @@ body {
   }
 
   .phone__number {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-size: 32px;
+    padding-right: 30px;
+
+    span {
+      color: #677077;
+    }
   }
 }
 
 .us-btn {
   position: relative;
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  background: #1a1a1a;
-  border: 2PX solid #2a2a2a;
-  padding: 0 70px;
-  height: 36px;
-  line-height: 32px;
+  background: transparent;
+  border: 2PX solid #8d959e;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 38px;
   outline: none;
   cursor: pointer;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: color .2s ease;
 
   &:before {
     content: "";
@@ -118,12 +136,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2a2a2a;
+    background: #8d959e;
     transform: translateY(-100%);
     transition: all .2s ease;
   }
 
   &:hover {
+    color: #000000;
+
     &:before {
       transform: translateY(0);
     }
@@ -132,6 +152,17 @@ body {
   span {
     position: relative;
     z-index: 1;
+  }
+}
+
+.stage {
+  iframe {
+    position: absolute;
+    border: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -146,6 +177,7 @@ body {
 @import 'pages/index';
 @import 'pages/company';
 @import 'pages/contacts';
+@import 'pages/residence';
 
 @media all and (max-width: 767px) {
   @import 'phone';

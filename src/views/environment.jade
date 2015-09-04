@@ -1,0 +1,35 @@
+extends templates/layout
+
+block vars
+  - var bodyClass = 'architecture'
+  - var activePage = 'around.html'
+
+
+block content 
+  - var images = 4
+
+  .in-wrapper.js-slider-container
+    .slider-wrapper
+      .slider
+        - var fi = 0
+        while fi < images
+          - fi++;
+            .item
+              .bg.slider-inside-back.day(style="background-image: url(images/around/#{fi}_env.jpg)")
+      .cover
+
+    //- .shadow-wrapper
+      .preview-gallery
+        .container
+          - var si = 0;
+          while si < images
+            - si++
+              .item
+                .preview(data-slide-id="#{si - 1}")
+                  .bg.slider-inside-back.day(style="background-image: url(images/around/thumbs/#{si}_env_hover.jpg)")
+
+    //- .day-night.show-tip.day
+    //-   .tip Для смены режима просмотра<br> нажмите на иконку
+    //-   .switch
+
+block scripts

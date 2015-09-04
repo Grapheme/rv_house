@@ -6,31 +6,34 @@ block vars
 
 
 block content 
-  - var images = 16
+  - var images = 7
 
-  .content
-    .slider-wrapper
+  .in-wrapper.js-slider-container
+    .slider-wrapper.to-fade
       .slider
-        - var bi = -1
-        while bi < images -1
-          - bi++
-          .item
-            .bg(style="background-image: url(images/slides/#{ bi % 2 + 1 }.jpg)")
+        - var fi = 0
+        while fi < images
+          - fi++
+            .item
+              .bg.slider-inside-back.day(style="background-image: url(images/residence/#{fi}_day.jpg)")
+              .bg.slider-inside-back.night(style="background-image: url(images/residence/#{fi}_night.jpg)")
       .cover
 
-    .shadow-wrapper
+    //- .shadow-wrapper
       .preview-gallery
+        //.mask-container
         .container
-          - var si = -1
-          while si < images -1
+          - var si = 0
+          while si < images
             - si++
-            .item
-              .preview(data-slide-id="#{ si }")
-                .bg(style="background-image: url(images/slides/#{ si % 2 + 1 }_small.jpg)")
+              .item
+                .preview(data-slide-id="#{si - 1}")
+                  .bg.slider-inside-back.day(style="background-image: url(images/residence/thumbs/#{si}_day_hover.jpg)")
+                  .bg.slider-inside-back.night(style="background-image: url(images/residence/thumbs/#{si}_night_hover.jpg)")
 
-    .day-night.show-tip.day
-      .tip Для смены режима просмотра<br> нажмите на иконку
-      .switch
+    .day-night.day
+      .tip Виды резиденции<br>Ночью
+      .switch.js-switch-time
 
 block scripts
 
