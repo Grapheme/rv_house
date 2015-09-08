@@ -1,3 +1,7 @@
+if($('[data-bodyclass]').length) {
+  $('body').addClass($('[data-bodyclass]').attr('data-bodyclass'))
+}
+
 function getCookie(name) {
   var matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"

@@ -941,12 +941,12 @@ body.architecture .day-night {
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    width: 55%; }
+    width: 25%; }
     .contacts .contacts-block .block__right .phone-block {
       position: relative; }
     .contacts .contacts-block .block__right .right__item {
       float: left;
-      width: 50%; }
+      width: 100%; }
       .contacts .contacts-block .block__right .right__item .item__title {
         color: #8d959e;
         text-transform: uppercase;
@@ -977,7 +977,7 @@ body.architecture .day-night {
           white-space: nowrap; }
       .contacts .contacts-block .block__right .right__item .item__bottom {
         position: relative;
-        margin-top: 80px; }
+        margin-top: 48px; }
         .contacts .contacts-block .block__right .right__item .item__bottom .bottom__item {
           margin-top: 10px; }
           .contacts .contacts-block .block__right .right__item .item__bottom .bottom__item .item__name {
